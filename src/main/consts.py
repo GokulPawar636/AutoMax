@@ -1,0 +1,53 @@
+CAR_BRANDS = (
+    ('Toyota', 'Toyota'),   
+    ('Honda', 'Honda'),
+    ('Ford', 'Ford'),
+    ('Chevrolet', 'Chevrolet'),
+    ('Nissan', 'Nissan'),
+    ('BMW', 'BMW'),
+    ('Mercedes-Benz', 'Mercedes-Benz'),
+    ('Volkswagen', 'Volkswagen'),
+    ('Audi', 'Audi'),
+    ('Hyundai', 'Hyundai'),
+    ('Kia', 'Kia'),
+    ('Subaru', 'Subaru'),
+    ('Mazda', 'Mazda'),
+    ('Dodge', 'Dodge'),
+    ('Jeep', 'Jeep'),
+    ('Lexus', 'Lexus'),
+    ('Jaguar', 'Jaguar'),
+    ('Land Rover', 'Land Rover'),
+    ('Porsche', 'Porsche'),
+    ('Tesla', 'Tesla'),
+    ('bmw', 'BMW')
+)
+
+Transmission_OPTIONS = (
+    ('Automatic', 'Automatic'),
+    ('Manual', 'Manual'),
+    ('Semi-Automatic', 'Semi-Automatic'),
+    ('CVT', 'CVT'),
+)
+
+# Location = (
+#     ('New York', 'New York'),
+#     ('Los Angeles', 'Los Angeles'),
+#     ('Chicago', 'Chicago'),
+#     ('Houston', 'Houston'),
+#     ('Phoenix', 'Phoenix'),
+#     ('Philadelphia', 'Philadelphia'),
+#     ('San Antonio', 'San Antonio'),
+#     ('San Diego', 'San Diego'),
+#     ('Dallas', 'Dallas'),
+#     ('San Jose', 'San Jose'),
+#     ('Austin', 'Austin'),
+#     ('Jacksonville', 'Jacksonville'),
+#     ('Fort Worth', 'Fort Worth'),
+#     ('Columbus', 'Columbus'),
+#     ('Charlotte', 'Charlotte'),
+#     ('San Francisco', 'San Francisco'),
+#     ('Indianapolis', 'Indianapolis'),
+#     ('Seattle', 'Seattle'),
+#     ('Denver', 'Denver'),
+#     ('Washington', 'Washington'),
+# )
