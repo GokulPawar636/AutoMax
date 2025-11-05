@@ -1,19 +1,19 @@
-{% extends "base/base.html" %}
+{% extends 'base/base.html' %}
 {% load static %}
 {% load crispy_forms_tags %}
 
-{% block  'body' %}
+{% block 'body' %}
 <div class="container-fluid text-center py-5">
     <div class="container px-4 py-5" id="hanging-icons">
         <div class="row g-4">
             <div class="col d-flex align-items-start">
                 <div>
-                    <h2 class="mb-3 border-bottom text-danger">Profile</h2>
+                    <h2 class="mb-3 border-bottom" style="color: black">Profile</h2>
                 </div>
             </div>
         </div>
-         <form action="" method="post" enctype="multipart/form-data">
-              {% csrf_token %}
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
             <div class="row">
                 <div class="col-6">
                     {{ user_form|crispy }}
@@ -22,12 +22,30 @@
                 <div class="col-6">
                     {{ location_form|crispy }}
                 </div>
-                 <br>
+                <br>
                 <button class="btn btn-lg btn-danger" type="submit" value="Submit">Save</button>
             </div>
         </form>
-
     </div>
+    <div class="container px-4">
+        <div class="row g-4 py-5">
+            <div class="col d-flex align-items-start">
+                <div>
+                    <h2 class="mb-3 border-bottom" style="color: black">Your Listings</h2>
+                </div>
+            </div>
+        </div>
+        <table class="table table-hover">
+            <tbody>
+                {% for listing in user_listing %}
+                <tr>
+                    <td>{{ listing.id }}</td>
+                    <td>{{listing.model }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>                                                                     
 </div>
 {% endblock  %}
  
