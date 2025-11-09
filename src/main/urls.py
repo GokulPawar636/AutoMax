@@ -1,13 +1,14 @@
 from django.urls import path
 from .views import main_view
 
-from .views import home_view, main_view, list_view, listing_view, edit_view
+from .views import home_view, main_view, list_view, listing_view, edit_view, like_listing_view
 urlpatterns = [
     path('', main_view, name='main'),  # ✅ root of app
     path('home/', home_view, name='home'),  # ✅ home page
     path('list/', list_view, name='list'),  # ✅ list page
     path('listing/<str:id>/', listing_view, name='listing'),  # ✅ listing page
     path('listing/<str:id>/edit/', edit_view, name = "edit"),
+    path('listing/<str:id>/like/', like_listing_view, name = 'like_listing'),
 
     
 ]
