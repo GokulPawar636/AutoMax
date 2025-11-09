@@ -14,11 +14,15 @@ def main_view(request):
 @login_required
 def home_view(request):
     listings = Listing.objects.all()
-    listing_filter = ListingFilter(request.GET, queryset = listings)
+    listing_filter = ListingFilter(request.GET, queryset=listings)
+    user_liked_listings = LikedListing.objects.filter(
+        profile=request.user.profile).values_list('listing')
+    liked_listings_ids = [l[0] for l in user_liked_listings]
     context = {
-        "listing_filter": listing_filter,
+        'listing_filter': listing_filter,
+        'liked_listings_ids': liked_listings_ids,
     }
-    return render(request, 'main/home.html',context)  # ✅ include subfolder path
+    return render(request, "main/home.html", context)
 
 @login_required
 def list_view(request):
